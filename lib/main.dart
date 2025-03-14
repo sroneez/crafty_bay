@@ -6,9 +6,9 @@ import 'firebase_options.dart';
 
 
 
-void main() async{
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform
-  );
+void main() {
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform
+  // );
   runApp(CraftyBay());
 }

@@ -1,3 +1,9 @@
 {
-  "version" : "Version"
+  "version" : "Version",
+  "welcomeBack" : "Welcome Back",
+  "yourEmailAndPassword" : "Please enter your email and password",
+  "password" : "password",
+  "signIn" : "Sign In",
+  "email" : "email"
+
 }

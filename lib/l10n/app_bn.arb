@@ -1,3 +1,8 @@
 {
-  "version" : "Version bn"
+  "version" : "ভার্সন",
+  "welcomeBack" : "স্বাগতম",
+  "yourEmailAndPassword" : " অনুগ্রহ করে আপনার ইমেইল এবং পাসওয়ার্ড দিন",
+  "password" : "পাসওয়ার্ড",
+  "signIn" : "সাইন ইন",
+  "email" : "ইমেইল"
 }

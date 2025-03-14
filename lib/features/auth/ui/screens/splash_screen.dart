@@ -1,8 +1,8 @@
 import 'package:crafty_bay/app/app_config.dart';
-import 'package:crafty_bay/app/assets_path.dart';
+import 'package:crafty_bay/core/extentions/localization_extention.dart';
 import 'package:crafty_bay/features/auth/ui/screens/sign_in_screen.dart';
+import 'package:crafty_bay/features/auth/ui/widgets/app_logo.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
@@ -37,11 +37,11 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             children: [
               Spacer(),
-              SvgPicture.asset(AssetsPath.logoSvg, width: 120,),
+              AppLogo(),
               Spacer(),
               CircularProgressIndicator(),
               const SizedBox(height:8),
-              Text('${AppLocalizations.of(context)!.version} ${AppConfig.currentAppVersion}'),
+              Text('${context.localization.version} ${AppConfig.currentAppVersion}'),
               
             ],
           ),
@@ -51,3 +51,4 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   
 }
+

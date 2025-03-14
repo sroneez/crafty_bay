@@ -16,6 +16,34 @@ class CraftyBay extends StatelessWidget {
       theme: ThemeData(
         colorSchemeSeed: AppColors.themeColor,
         scaffoldBackgroundColor: Colors.white,
+        textTheme: TextTheme(
+          bodyLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+          bodySmall: TextStyle(fontSize: 16, color: Colors.grey),
+        ),
+          inputDecorationTheme: InputDecorationTheme(
+      contentPadding: EdgeInsets.symmetric(horizontal: 20),
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.themeColor),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.themeColor),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.themeColor),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.themeColor),
+      ),
+    ),
+        elevatedButtonTheme:ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              fixedSize: Size.fromWidth(double.maxFinite),
+              backgroundColor: AppColors.themeColor,
+              foregroundColor: Colors.white,
+              padding: EdgeInsets.symmetric(vertical: 14),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
+          )
+        )
       ),
       localizationsDelegates: [
         AppLocalizations.delegate,
@@ -23,8 +51,9 @@ class CraftyBay extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      locale: Locale('en'),
       supportedLocales: [
-        // Locale('en'), // English
+        Locale('en'), // English
         Locale('bn'), // bengali
       ],
     );
