@@ -1,5 +1,7 @@
 import 'package:crafty_bay/features/auth/ui/screens/sign_in_screen.dart';
+import 'package:crafty_bay/features/auth/ui/screens/sign_up_screen.dart';
 import 'package:crafty_bay/features/auth/ui/screens/splash_screen.dart';
+import 'package:crafty_bay/features/auth/ui/screens/verify_otp_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes{
@@ -9,6 +11,10 @@ class AppRoutes{
       route = SplashScreen();
     }else if(settings.name == SignInScreen.name){
       route = SignInScreen();
+    }else if(settings.name == SignUpScreen.name){
+      route = const SignUpScreen();
+    }else if(settings.name == VerifyOtpScreen.name){
+      route = const VerifyOtpScreen();
     }
     return MaterialPageRoute(builder: (context){
       return route;

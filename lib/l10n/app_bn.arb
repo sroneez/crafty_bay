@@ -4,5 +4,17 @@
   "yourEmailAndPassword" : " অনুগ্রহ করে আপনার ইমেইল এবং পাসওয়ার্ড দিন",
   "password" : "পাসওয়ার্ড",
   "signIn" : "সাইন ইন",
-  "email" : "ইমেইল"
+  "email" : "ইমেইল",
+  "registerYourAccount": "Register Your Account",
+  "getStartedWithYourDetails" : "Get started with your details",
+  "firstName" : "First name",
+  "lastName" : "Last name",
+  "phone" : "Phone",
+  "deliveryAddress" : "Delivery Address",
+  "signUp" : "Sign Up",
+  "haveAnAccount" : "Have an account",
+  "doNotHaveAnAccount" : "Do not have an account",
+  "confirm" : "Confirm",
+  "enterYourOtpCode" : "Enter Your OTP Code",
+  "enterASixDigitOtpCode" : "Enter a six digit otp code"
 }

@@ -4,6 +4,18 @@
   "yourEmailAndPassword" : "Please enter your email and password",
   "password" : "password",
   "signIn" : "Sign In",
-  "email" : "email"
+  "email" : "email",
+  "registerYourAccount": "Register Your Account",
+  "getStartedWithYourDetails" : "Get started with your details",
+  "firstName" : "First name",
+  "lastName" : "Last name",
+  "phone" : "Phone",
+  "deliveryAddress" : "Delivery Address",
+  "signUp" : "Sign Up",
+  "haveAnAccount" : "Have an account",
+  "doNotHaveAnAccount" : "Do not have an account",
+  "confirm" : "Confirm",
+  "enterYourOtpCode" : "Enter Your OTP Code",
+  "enterAFourDigitOtpCode" : "Enter a 4 digit otp code"
 
 }
