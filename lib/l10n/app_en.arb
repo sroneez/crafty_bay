@@ -16,6 +16,7 @@
   "doNotHaveAnAccount" : "Do not have an account",
   "confirm" : "Confirm",
   "enterYourOtpCode" : "Enter Your OTP Code",
-  "enterAFourDigitOtpCode" : "Enter a 4 digit otp code"
+  "enterAFourDigitOtpCode" : "Enter a 4 digit otp code",
+  "search" : "search"
 
 }

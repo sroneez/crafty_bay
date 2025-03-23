@@ -42,7 +42,10 @@ class CraftyBay extends StatelessWidget {
               foregroundColor: Colors.white,
               padding: EdgeInsets.symmetric(vertical: 14),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))
-          )
+          ),
+        ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white
         )
       ),
       localizationsDelegates: [
