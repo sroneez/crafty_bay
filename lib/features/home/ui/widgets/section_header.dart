@@ -23,7 +23,7 @@ class SectionHeader extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: onTap,
           child: Text('See all'),
         )
       ],

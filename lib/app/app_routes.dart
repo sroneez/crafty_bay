@@ -2,6 +2,7 @@ import 'package:crafty_bay/features/auth/ui/screens/sign_in_screen.dart';
 import 'package:crafty_bay/features/auth/ui/screens/sign_up_screen.dart';
 import 'package:crafty_bay/features/auth/ui/screens/splash_screen.dart';
 import 'package:crafty_bay/features/auth/ui/screens/verify_otp_screen.dart';
+import 'package:crafty_bay/features/categories/ui/screens/category_list_screen.dart';
 import 'package:crafty_bay/features/common/ui/screens/main_bottom_nav_bar_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,8 @@ class AppRoutes{
       route = const VerifyOtpScreen();
     }else if(settings.name == MainBottomNavBarScreen.name){
       route = const MainBottomNavBarScreen();
+    }else if(settings.name == CategoryListScreen.name){
+      route = const CategoryListScreen();
     }
     return MaterialPageRoute(builder: (context){
       return route;
