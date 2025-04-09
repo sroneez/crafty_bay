@@ -26,6 +26,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             onPressed: () {
               Get.find<MainBottomNavBarController>().moveToHome();
             },
+
             icon: Icon(Icons.arrow_back_ios),
           ),
           title: Text('Categories'),
