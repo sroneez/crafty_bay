@@ -72,7 +72,7 @@ class ProductCard extends StatelessWidget {
                   size: 20,
                   color: Colors.white,
                 ),
-              )
+              ),
             ],
           ),
         ]),
