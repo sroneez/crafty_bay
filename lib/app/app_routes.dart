@@ -4,8 +4,10 @@ import 'package:crafty_bay/features/auth/ui/screens/splash_screen.dart';
 import 'package:crafty_bay/features/auth/ui/screens/verify_otp_screen.dart';
 import 'package:crafty_bay/features/categories/ui/screens/category_list_screen.dart';
 import 'package:crafty_bay/features/common/ui/screens/main_bottom_nav_bar_screen.dart';
+import 'package:crafty_bay/features/products/ui/screens/create_product_review_screen.dart';
 import 'package:crafty_bay/features/products/ui/screens/product_details_screen.dart';
 import 'package:crafty_bay/features/products/ui/screens/product_list_screen.dart';
+import 'package:crafty_bay/features/products/ui/screens/product_review_screen.dart';
 import 'package:crafty_bay/features/wishlist/ui/screens/wish_list_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +31,10 @@ class AppRoutes{
       route = ProductListScreen(category: category);
     }else if(settings.name == ProductDetailsScreen.name){
       route = const ProductDetailsScreen();
+    }else if(settings.name == ProductReviewScreen.name){
+      route = ProductReviewScreen();
+    }else if(settings.name == CreateProductReviewScreen.name){
+      route = CreateProductReviewScreen();
     }
     return MaterialPageRoute(builder: (context){
       return route;

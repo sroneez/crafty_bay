@@ -1,4 +1,5 @@
 import 'package:crafty_bay/app/app_colors.dart';
+import 'package:crafty_bay/features/products/ui/screens/product_review_screen.dart';
 import 'package:crafty_bay/features/products/widget/color_picker.dart';
 import 'package:crafty_bay/features/products/widget/increment_decrement_counter_widget.dart';
 import 'package:crafty_bay/features/products/widget/product_image_carousel_slider.dart';
@@ -62,7 +63,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                         ],
                                       ),
                                       TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.pushNamed(context, ProductReviewScreen.name);
+                                        },
                                         child: Text('Reviews'),
                                       ),
                                       Card(
@@ -105,6 +108,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             print(selectedSize);
                           },
                         ),
+                        const SizedBox(height: 16,),
                         Text(
                           'Description',
                           style: TextStyle(
