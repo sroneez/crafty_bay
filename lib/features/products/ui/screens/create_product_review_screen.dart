@@ -12,7 +12,9 @@ class CreateProductReviewScreen extends StatefulWidget {
 }
 
 class _CreateProductReviewScreenState extends State<CreateProductReviewScreen> {
-  // TextFormField _
+  final TextEditingController _firstNameTEController = TextEditingController();
+  final TextEditingController _lastNameTEController = TextEditingController();
+  final TextEditingController _reviewTEController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class _CreateProductReviewScreenState extends State<CreateProductReviewScreen> {
         child: Column(
           children: [
             TextFormField(
+              controller: _firstNameTEController,
               style: TextStyle(fontSize: 14),
               decoration: InputDecoration(
                 hintText: 'First Name',
@@ -44,6 +47,7 @@ class _CreateProductReviewScreenState extends State<CreateProductReviewScreen> {
               height: 16,
             ),
             TextFormField(
+              controller: _lastNameTEController,
               style: TextStyle(fontSize: 14),
               decoration: InputDecoration(
                 hintText: 'last Name',
@@ -63,6 +67,7 @@ class _CreateProductReviewScreenState extends State<CreateProductReviewScreen> {
               height: 16,
             ),
             TextFormField(
+              controller: _reviewTEController,
               style: TextStyle(fontSize: 14),
               maxLines: 8,
               textAlign: TextAlign.start,
@@ -92,5 +97,13 @@ class _CreateProductReviewScreenState extends State<CreateProductReviewScreen> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _firstNameTEController.dispose();
+    _lastNameTEController.dispose();
+    _reviewTEController.dispose();
   }
 }
