@@ -177,7 +177,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     replacement: CenteredCircularProgressIndicator(),
                     child: ElevatedButton(
                       onPressed: () {
-                        _onTapSignInButton();
+                        _onTapSignUpButton();
                       },
                       child: Text(context.localization.signUp),
                     ),
@@ -210,8 +210,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  Future<void> _onTapSignInButton() async{
-    if (_formKey.currentState?.validate() ?? false) {
+  Future<void> _onTapSignUpButton() async{
+    if (_formKey.currentState!.validate()) {
       SignUpModel signUpModel = SignUpModel(
         email: _emailTEController.text.trim(),
         firstName: _firstNameTEController.text.trim(),
@@ -222,11 +222,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
       );
       final isSuccess = await  signUpController.signUp(signUpModel);
       if(isSuccess){
-        Navigator.pushNamed(context, VerifyOtpScreen.name);
+        showSnackBarMessage(context, 'Account created successfully');
+        Navigator.pushNamed(context, VerifyOtpScreen.name,arguments: _emailTEController.text.trim());
       }else{
-        showSnackBarMessage(context, signUpController.errorMessage ??'something went wrong');
+        showSnackBarMessage(context, signUpController.errorMessage!);
       }
     }
+  }
+  void _onTapSignInButton(){
+    Navigator.pop(context);
   }
 
   @override

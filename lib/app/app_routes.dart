@@ -19,9 +19,10 @@ class AppRoutes{
     }else if(settings.name == SignInScreen.name){
       route = SignInScreen();
     }else if(settings.name == SignUpScreen.name){
-      route = const SignUpScreen();
+      route =  SignUpScreen();
     }else if(settings.name == VerifyOtpScreen.name){
-      route = const VerifyOtpScreen();
+      final String email = settings.arguments as String;
+      route = VerifyOtpScreen(email: email,);
     }else if(settings.name == MainBottomNavBarScreen.name){
       route = const MainBottomNavBarScreen();
     }else if(settings.name == CategoryListScreen.name){
