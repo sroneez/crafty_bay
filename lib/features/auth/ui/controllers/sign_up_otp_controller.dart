@@ -1,6 +1,6 @@
 import 'package:crafty_bay/app/app_urls.dart';
 import 'package:crafty_bay/core/network_caller/network_caller.dart';
-import 'package:crafty_bay/features/auth/data/sign_up_otp_model.dart';
+import 'package:crafty_bay/features/auth/data/models/sign_up_otp_model.dart';
 import 'package:get/get.dart';
 
 class SignUpOtpController extends GetxController {

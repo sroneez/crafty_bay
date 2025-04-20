@@ -2,7 +2,7 @@ import 'package:crafty_bay/app/app_colors.dart';
 import 'package:crafty_bay/core/extentions/localization_extention.dart';
 import 'package:crafty_bay/core/widgets/centered_circular_progress_indicator.dart';
 import 'package:crafty_bay/core/widgets/show_snack_bar_message.dart';
-import 'package:crafty_bay/features/auth/data/sign_in_model.dart';
+import 'package:crafty_bay/features/auth/data/models/sign_in_model.dart';
 import 'package:crafty_bay/features/auth/ui/controllers/sign_in_controller.dart';
 import 'package:crafty_bay/features/auth/ui/screens/sign_up_screen.dart';
 import 'package:crafty_bay/features/auth/ui/widgets/app_logo.dart';
@@ -66,6 +66,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 TextFormField(
                   controller: _passwordTEController,
+                  obscureText: true,
                   style: TextStyle(fontSize: 14),
                   decoration: InputDecoration(
                       hintText: context.localization.password,
@@ -77,7 +78,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 GetBuilder<SignInController>(
                   builder: (controller) {
                     return Visibility(
-                      visible: _signInController.isLoading == false,
+                      visible: controller.isLoading == false,
                       replacement: CenteredCircularProgressIndicator(),
                       child: ElevatedButton(
                         onPressed:_onTapSignInButton,

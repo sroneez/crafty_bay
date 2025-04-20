@@ -2,7 +2,7 @@ import 'package:crafty_bay/app/app_colors.dart';
 import 'package:crafty_bay/core/extentions/localization_extention.dart';
 import 'package:crafty_bay/core/widgets/centered_circular_progress_indicator.dart';
 import 'package:crafty_bay/core/widgets/show_snack_bar_message.dart';
-import 'package:crafty_bay/features/auth/data/sign_up_otp_model.dart';
+import 'package:crafty_bay/features/auth/data/models/sign_up_otp_model.dart';
 import 'package:crafty_bay/features/auth/ui/controllers/sign_up_otp_controller.dart';
 import 'package:crafty_bay/features/auth/ui/screens/sign_in_screen.dart';
 import 'package:crafty_bay/features/auth/ui/widgets/app_logo.dart';

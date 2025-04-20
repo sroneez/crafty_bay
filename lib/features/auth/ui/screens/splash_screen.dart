@@ -1,5 +1,6 @@
 import 'package:crafty_bay/app/app_config.dart';
 import 'package:crafty_bay/core/extentions/localization_extention.dart';
+import 'package:crafty_bay/features/auth/ui/controllers/auth_controller.dart';
 import 'package:crafty_bay/features/auth/ui/screens/sign_in_screen.dart';
 import 'package:crafty_bay/features/auth/ui/screens/sign_up_screen.dart';
 import 'package:crafty_bay/features/auth/ui/widgets/app_logo.dart';
@@ -26,7 +27,12 @@ class _SplashScreenState extends State<SplashScreen> {
   
   Future<void> _moveToNextScreen()async{
      await Future.delayed(Duration(seconds: 3));
-    Navigator.pushReplacementNamed(context, SignInScreen.name);
+     bool isUserLoggedIn = await AuthController().isUserLoggedIn();
+     if(isUserLoggedIn){
+       Navigator.pushReplacementNamed(context, MainBottomNavBarScreen.name);
+     }else{
+       Navigator.pushReplacementNamed(context, SignInScreen.name);
+     }
   }
   
   @override

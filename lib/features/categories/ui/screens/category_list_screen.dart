@@ -34,7 +34,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
         body: GridView.builder(
             itemCount: 10,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4, mainAxisSpacing: 16, crossAxisSpacing: 8),
+                crossAxisCount: 3, mainAxisSpacing: 16, crossAxisSpacing: 8),
             itemBuilder: (index, context) {
               return CategoryItem(
                   categoryIcon: Icon(Icons.computer), iconName: 'computer');
