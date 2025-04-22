@@ -1,3 +1,4 @@
+import 'package:crafty_bay/features/common/controller/slider_controller.dart';
 import 'package:crafty_bay/features/categories/ui/screens/category_list_screen.dart';
 import 'package:crafty_bay/features/common/controller/main_bottom_nav_bar_controller.dart';
 import 'package:crafty_bay/features/home/ui/screens/home_screen.dart';
@@ -22,6 +23,11 @@ class _MainBottomNavBarScreenState extends State<MainBottomNavBarScreen> {
     const HomeScreen(),
     const WishListScreen(), 
   ];
+  @override
+  void initState() {
+    Get.find<HomeSliderController>().getSlider();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
