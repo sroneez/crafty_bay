@@ -5,12 +5,8 @@ import 'package:flutter/material.dart';
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
     super.key,
-    required this.categoryIcon,
-    required this.iconName,
   });
 
-  final Icon categoryIcon;
-  final String iconName;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +24,7 @@ class CategoryItem extends StatelessWidget {
               width: 70,
               child: FittedBox(
                 child: Icon(
-                  categoryIcon.icon,
+                  Icons.computer,
                   color: AppColors.themeColor,
                 ),
               ),
@@ -37,7 +33,7 @@ class CategoryItem extends StatelessWidget {
               height: 8,
             ),
             Text(
-              iconName,
+              'computer',
               style: TextStyle(color: AppColors.themeColor, fontSize: 16),
             ),
           ],

@@ -1,3 +1,5 @@
+import 'package:crafty_bay/core/widgets/centered_circular_progress_indicator.dart';
+import 'package:crafty_bay/features/common/controller/category_controller.dart';
 import 'package:crafty_bay/features/common/controller/main_bottom_nav_bar_controller.dart';
 import 'package:crafty_bay/features/common/ui/widgets/category_item.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +15,15 @@ class CategoryListScreen extends StatefulWidget {
 }
 
 class _CategoryListScreenState extends State<CategoryListScreen> {
+  final CategoryController _categoryController = Get.find<CategoryController>();
+  ScrollController _scrollController = ScrollController();
+
+  @override
+  void initState() {
+    _categoryController.initialLoad();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -31,14 +42,25 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
           ),
           title: Text('Categories'),
         ),
-        body: GridView.builder(
-            itemCount: 10,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, mainAxisSpacing: 16, crossAxisSpacing: 8),
-            itemBuilder: (index, context) {
-              return CategoryItem(
-                  categoryIcon: Icon(Icons.computer), iconName: 'computer');
-            }),
+        body: GetBuilder<CategoryController>(
+            builder: (controller) {
+              if (controller.isInitialLoading){
+              return CenteredCircularProgressIndicator();
+              }
+              return Visibility(
+                visible: controller.isInitialLoading==false,
+                child: GridView.builder(
+                controller: _scrollController,
+                itemCount: _categoryController.categoryList.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, mainAxisSpacing: 16, crossAxisSpacing: 8)
+                ,
+                itemBuilder: (index, context) {
+                return FittedBox(child: CategoryItem(),);
+                }),
+              );
+            }
+        ),
       ),
     );
   }

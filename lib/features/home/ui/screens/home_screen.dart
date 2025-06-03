@@ -95,42 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          CategoryItem(
-            categoryIcon: Icon(
-              Icons.computer,
-            ),
-            iconName: 'Computer',
-          ),
-          CategoryItem(
-            categoryIcon: Icon(
-              Icons.computer,
-            ),
-            iconName: 'Computer',
-          ),
-          CategoryItem(
-            categoryIcon: Icon(
-              Icons.computer,
-            ),
-            iconName: 'Computer',
-          ),
-          CategoryItem(
-            categoryIcon: Icon(
-              Icons.computer,
-            ),
-            iconName: 'Computer',
-          ),
-          CategoryItem(
-            categoryIcon: Icon(
-              Icons.computer,
-            ),
-            iconName: 'Computer',
-          ),
-          CategoryItem(
-            categoryIcon: Icon(
-              Icons.computer,
-            ),
-            iconName: 'Computer',
-          ),
+          CategoryItem(),
         ],
       ),
     );
